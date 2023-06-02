@@ -1,0 +1,30 @@
+interface I {
+  GetConstructPosition(): Vector3;
+  GetConstructForwardVector(): Vector3;
+  GetConstructRightVector(): Vector3;
+  GetConstructUpVector(): Vector3;
+  GetConstructMaxDimensions(): Vector3;
+  GetConstructMinDimensions(): Vector3;
+  GetConstructRoll(): number;
+  GetConstructPitch(): number;
+  GetConstructYaw(): number;
+  GetConstructCenterOfMass(): Vector3;
+  GetAiPosition(mainframeIndex: number): Vector3;
+  GetVelocityMagnitude(): number;
+  GetForwardsVelocityMagnitude(): number;
+  GetVelocityVector(): Vector3;
+  GetVelocityVectorNormalized(): Vector3;
+  GetAngularVelocity(): Vector3;
+  GetLocalAngularVelocity(): Vector3;
+  GetAmmoFraction(): number;
+  GetFuelFraction(): number;
+  GetSparesFraction(): number;
+  GetEnergyFraction(): number;
+  GetPowerFraction(): number;
+  GetElectricPowerFraction(): number;
+  GetHealthFraction(): number;
+  IsDocked(): boolean;
+  GetHealthFractionDifference(time: number): number;
+  GetBlueprintName(): string;
+  GetUniqueId(): number;
+}
