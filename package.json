@@ -1,0 +1,28 @@
+{
+  "name": "typescript-definitions",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tstl",
+    "dev": "tstl --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/from-the-depths/typescript-definitions.git"
+  },
+  "author": {
+    "name": "Shaun Wu",
+    "email": "alexbay218@gmail.com"
+  },
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://gitlab.com/from-the-depths/typescript-definitions/issues"
+  },
+  "homepage": "https://gitlab.com/from-the-depths/typescript-definitions#readme",
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "typescript-to-lua": "^1.15.1"
+  }
+}
