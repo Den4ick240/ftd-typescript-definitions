@@ -28,11 +28,11 @@
   },
   "homepage": "https://gitlab.com/from-the-depths/typescript-definitions#readme",
   "devDependencies": {
-    "lua-types": "^2.13.1",
     "typescript": "^5.0.4",
     "typescript-to-lua": "^1.15.1"
   },
   "dependencies": {
+    "lua-types": "^2.13.1",
     "shx": "^0.3.4"
   }
 }
