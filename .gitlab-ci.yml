@@ -12,6 +12,7 @@ install_package:
 
 publish_package:
   stage: deploy
+  image: node:16
   script:
     - npm config set -- '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
     - npm publish --verbose
