@@ -1,7 +1,7 @@
 {
-  "name": "typescript-definitions",
+  "name": "ftd-typescript-definitions",
   "version": "0.0.0",
-  "description": "",
+  "description": "TypescriptToLua definitions for From The Depths",
   "main": "index.js",
   "scripts": {
     "build": "tstl",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://gitlab.com/from-the-depths/typescript-definitions#readme",
   "devDependencies": {
+    "lua-types": "^2.13.1",
     "typescript": "^5.0.4",
     "typescript-to-lua": "^1.15.1"
   }
