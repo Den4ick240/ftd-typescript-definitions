@@ -9,7 +9,7 @@
     "strict": true
   },
   "tstl": {
-    "luaTarget": "JIT",
+    "luaTarget": "5.1",
     "buildMode": "library"
   }
 }

@@ -1,9 +1,9 @@
 {
   "name": "ftd-typescript-definitions",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "TypescriptToLua definitions for From The Depths",
   "main": "./dist/index",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "scripts": {
     "start": "tstl --watch",
     "build": "tstl && shx cp -r src/* dist/",
