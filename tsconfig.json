@@ -3,9 +3,11 @@
   "compilerOptions": {
     "outDir": "./dist",
     "target": "ESNext",
+    "declaration": true,
+    "declarationMap": true,
     "lib": ["ESNext"],
     "moduleResolution": "Node",
-    "types": ["lua-types/jit"],
+    "types": ["lua-types/5.1"],
     "strict": true
   },
   "tstl": {

@@ -1,18 +1,20 @@
 {
   "name": "ftd-typescript-definitions",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "TypescriptToLua definitions for From The Depths",
   "main": "./dist/index",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "start": "tstl --watch",
-    "build": "tstl && shx cp -r src/* dist/",
+    "build": "tsc && tstl && shx cp -r src/types dist/ && npm run fix",
+    "fix": "node ./script/postbuild.js",
     "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
     "dist/**/*.lua",
-    "dist/**/*.ts"
+    "dist/**/*.d.ts",
+    "dist/**/*.js"
   ],
   "repository": {
     "type": "git",

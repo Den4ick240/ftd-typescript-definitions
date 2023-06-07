@@ -1,4 +1,4 @@
-/// <reference types="lua-types/jit" />
+/// <reference types="lua-types/5.1" />
 
 /// <reference path="mathf.d.ts" />
 /// <reference path="quaterion.d.ts" />
