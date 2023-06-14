@@ -1,6 +1,16 @@
-/** @NoSelf */
+/**
+ * Based off of Unity 2021.3 documentation (https://docs.unity3d.com/ScriptReference/Quaternion.html)
+ */
 declare class Quaterion {
+  /**
+   * @readonly
+   * The identity rotation.
+   * 
+   * This quaternion corresponds to "no rotation" - the object is perfectly aligned with the world or parent axes.
+   */
   static identity: Quaterion;
+  /** @hidden */
+  constructor();
   eulerAngles: Vector3;
   0: number;
   1: number;
@@ -30,5 +40,5 @@ declare class Quaterion {
   multiply: LuaMultiplicationMethod<Quaterion, Quaterion>;
 }
 
-/** @NoSelf */
+//** @notExported */
 declare function Quaterion(x: number, y: number, z: number, w: number): Quaterion;

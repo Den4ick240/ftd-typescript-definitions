@@ -1,4 +1,3 @@
-/** @NoSelf */
 declare class Vector3 {
   static back: Vector3;
   static down: Vector3;
@@ -10,6 +9,8 @@ declare class Vector3 {
   static right: Vector3;
   static up: Vector3;
   static zero: Vector3;
+  /** @hidden */
+  constructor();
   magnitude: number;
   normalized: number;
   sqrMagnitude: number;
@@ -49,5 +50,4 @@ declare class Vector3 {
   divide: LuaDivisionMethod<number, Vector3>;
 }
 
-/** @NoSelf */
 declare function Vector3(x: number, y: number, z: number): Vector3;

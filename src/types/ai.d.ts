@@ -1,6 +1,6 @@
-import { AIFiringMode } from "../enums/ai";
+import { AIFiringMode, AIMovementMode } from "../enums/ai";
 
 interface I {
-  GetAIMovementMode(index: number): AIFiringMode;
+  GetAIMovementMode(index: number): AIMovementMode;
   GetAIFiringMode(index: number): AIFiringMode;
 }

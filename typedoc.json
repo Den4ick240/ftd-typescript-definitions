@@ -1,0 +1,16 @@
+{
+  "name": "FTD Typescript Definitions",
+  "includeVersion": true,
+  "entryPoints": [
+    "src/**/*.ts"
+  ],
+  "entryPointStrategy": "resolve",
+  "out": "docs",
+  "sort": [
+    "source-order"
+  ],
+  "plugin": [
+    "typedoc-plugin-merge-modules",
+    "typedoc-plugin-not-exported"
+  ]
+}

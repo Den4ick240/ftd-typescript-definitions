@@ -6,15 +6,16 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "start": "tstl --watch",
+    "start-docs": "watch typedoc src/",
     "build": "tsc && tstl && shx cp -r src/types dist/ && npm run fix",
+    "build-docs": "typedoc",
     "fix": "node ./script/postbuild.js",
     "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
     "dist/**/*.lua",
-    "dist/**/*.d.ts",
-    "dist/**/*.js"
+    "dist/**/*.d.ts"
   ],
   "repository": {
     "type": "git",
@@ -30,8 +31,12 @@
   },
   "homepage": "https://gitlab.com/from-the-depths/typescript-definitions#readme",
   "devDependencies": {
+    "typedoc": "^0.24.8",
+    "typedoc-plugin-merge-modules": "^5.0.1",
+    "typedoc-plugin-not-exported": "^0.1.6",
     "typescript": "^5.0.4",
-    "typescript-to-lua": "^1.15.1"
+    "typescript-to-lua": "^1.15.1",
+    "watch": "^1.0.2"
   },
   "dependencies": {
     "lua-types": "^2.13.1",
