@@ -8,7 +8,6 @@ install_package:
   artifacts:
     paths:
       - node_modules
-      - dist
 
 publish_package:
   stage: deploy
@@ -28,3 +27,11 @@ release:
   release:
     tag_name: '$CI_COMMIT_TAG'
     description: '$CI_COMMIT_TAG'
+
+pages:
+  script:
+    - npm run build-docs
+    - mv docs/ public/
+  artifacts:
+    paths:
+      - public
