@@ -1,6 +1,6 @@
 import { BlockInfo } from "./components";
 
-interface I {
+export interface ISubconstructs {
   GetAllSubconstructsCount(): number;
   GetSubConstructIdentifier(index: number): number;
   GetSubconstructsChildrenCount(SubConstructIdentifier: number): number;

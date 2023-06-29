@@ -1,4 +1,4 @@
-interface I {
+export interface IMisc {
   GetTerrainAltitudeForPosition(x: number, y: number, z: number): number;
   GetTerrainAltitudeForLocalPosition(x: number, y: number, z: number): number;
   GetGravityForAltitude(alt: number): Vector3;

@@ -1,4 +1,4 @@
-interface I {
+export interface ITarget {
   GetNumberOfMainframes(): number;
   GetNumberOfTargets(mainframeIndex: number): number;
   GetTargetInfo(mainframeIndex: number, targetIndex: number): TargetInfo;
@@ -6,7 +6,7 @@ interface I {
   GetTargetPositionInfoForPosition(mainframeIndex: number, x: number, y: number, z: number): TargetPositionInfo;
 }
 
-interface TargetInfo {
+export interface TargetInfo {
   Valid: boolean;
   Priority: number;
   Score: number;
@@ -19,7 +19,7 @@ interface TargetInfo {
   Id: number;
 }
 
-interface TargetPositionInfo {
+export interface TargetPositionInfo {
   Valid: boolean;
   Azimuth: number;
   Elevation: number;

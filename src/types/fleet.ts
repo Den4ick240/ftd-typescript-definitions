@@ -1,10 +1,12 @@
-interface I {
+import { FriendlyInfo } from "./friendly";
+
+export interface IFleet {
   FleetIndex(): number;
   Fleet(): FleetInfo;
   IsFlagship(): boolean;
 }
 
-interface FleetInfo {
+export interface FleetInfo {
   ID: number;
   Name: string;
   Flagship: FriendlyInfo;

@@ -7,7 +7,7 @@
   "scripts": {
     "start": "tstl --watch",
     "start-docs": "watch typedoc src/",
-    "build": "tsc && tstl && shx cp -r src/types dist/ && npm run fix",
+    "build": "tsc && tstl && shx cp -r src/types/*.d.ts dist/types/ && npm run fix",
     "build-docs": "typedoc",
     "fix": "node ./script/postbuild.js",
     "prepublishOnly": "npm run build",
@@ -33,7 +33,6 @@
   "devDependencies": {
     "typedoc": "^0.24.8",
     "typedoc-plugin-merge-modules": "^5.0.1",
-    "typedoc-plugin-not-exported": "^0.1.6",
     "typescript": "^5.0.4",
     "typescript-to-lua": "^1.15.1",
     "watch": "^1.0.2"

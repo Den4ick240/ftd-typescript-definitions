@@ -1,6 +1,7 @@
 import { BlockInfo } from "./components";
+import { MissileWarningInfo } from "./warning";
 
-interface I {
+export interface IGuidance {
   GetLuaTransceiverCount(): number;
   GetLuaControlledMissileCount(luaTransceiverIndex: number): number;
   GetLuaTransceiverInfo(luaTransceiverIndex: number): BlockInfo;

@@ -1,10 +1,10 @@
-interface I {
+export interface IFriendly {
   GetFriendlyCount(): number;
   GetFriendlyInfo(index: number): FriendlyInfo;
   GetFriendlyInfoById(id: number): FriendlyInfo;
 }
 
-interface FriendlyInfo {
+export interface FriendlyInfo {
   Valid: boolean;
   Rotation: Quaterion;
   ReferencePosition: Vector3;

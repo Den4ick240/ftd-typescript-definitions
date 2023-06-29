@@ -1,9 +1,9 @@
-interface I {
+export interface IResources {
   ResourceZones(): ResourceZoneInfo[];
   Resources(): ResourceInfo;
 }
 
-interface ResourceZoneInfo {
+export interface ResourceZoneInfo {
   Id: number;
   Name: string;
   Position: Vector3;
@@ -11,7 +11,7 @@ interface ResourceZoneInfo {
   Resources: ResourceInfo;
 }
 
-interface ResourceInfo {
+export interface ResourceInfo {
   CrystalTotal: number;
   CrystalMax: number;
   MetalTotal: number;

@@ -1,9 +1,9 @@
-interface I {
+export interface IWarning {
   GetNumberOfWarnings(): number;
   GetMissileWarning(missileIndex: number): MissileWarningInfo;
 }
 
-interface MissileWarningInfo {
+export interface MissileWarningInfo {
   Valid: boolean;
   Position: Vector3;
   Velocity: Vector3;

@@ -237,5 +237,4 @@ declare class Quaterion {
   multiply: LuaMultiplicationMethod<Quaterion, Quaterion>;
 }
 
-//** @notExported */
 declare function Quaterion(x: number, y: number, z: number, w: number): Quaterion;

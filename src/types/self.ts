@@ -1,4 +1,4 @@
-interface I {
+export interface ISelf {
   GetConstructPosition(): Vector3;
   GetConstructForwardVector(): Vector3;
   GetConstructRightVector(): Vector3;

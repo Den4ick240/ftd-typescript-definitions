@@ -1,6 +1,6 @@
 import { BlockInfo } from "./components";
 
-interface I {
+export interface ISpinner {
   SetSpinBlockSpeedFactor(SubConstructIdentifier: number, speedFactor: number): void;
   SetSpinBlockPowerDrive(SubConstructIdentifier: number, drive: number): void;
   SetSpinBlockRotationAngle(SubConstructIdentifier: number, angle: number): void;

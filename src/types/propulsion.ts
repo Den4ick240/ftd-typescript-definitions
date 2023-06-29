@@ -1,6 +1,6 @@
 import { ComplexControllerStimulus, PropulsionRequest } from "../enums/propulsion";
 
-interface I {
+export interface IPropulsion {
   TellAiThatWeAreTakingControl(): void;
   AddPropulsionRequest(type: PropulsionRequest, drive: number): void;
   SetPropulsionRequest(type: PropulsionRequest, drive: number): void;

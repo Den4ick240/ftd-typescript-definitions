@@ -1,7 +1,7 @@
 import { WeaponType } from "../enums/weapons";
 import { BlockInfo } from "./components";
 
-interface I {
+export interface IWeapons {
   GetWeaponCount(): number;
   GetWeaponInfo(weaponIndex: number): WeaponInfo;
   GetWeaponConstraints(weaponIndex: number): WeaponConstraints;
@@ -16,7 +16,7 @@ interface I {
   FireWeaponOnSubConstruct(SubConstructIdentifier: number, weaponIndex: number, weaponSlot: number): boolean;
 }
 
-interface WeaponInfo {
+export interface WeaponInfo {
   Valid: boolean;
   LocalPosition: Vector3;
   GlobalPosition: Vector3;
@@ -30,7 +30,7 @@ interface WeaponInfo {
   PlayerCurrentlyControllingIt: boolean;
 }
 
-interface WeaponConstraints {
+export interface WeaponConstraints {
   Valid: boolean;
   MinAzimuth: number;
   MaxAzimuth: number;
