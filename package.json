@@ -14,8 +14,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
-    "dist/**/*.lua",
-    "dist/**/*.d.ts"
+    "src/**/*.ts",
+    "src/*.ts"
   ],
   "repository": {
     "type": "git",
