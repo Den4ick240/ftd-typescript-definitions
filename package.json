@@ -2,8 +2,7 @@
   "name": "ftd-typescript-definitions",
   "version": "1.2.4",
   "description": "TypescriptToLua definitions for From The Depths",
-  "main": "./dist/index",
-  "types": "./dist/index.d.ts",
+  "main": "./src/index",
   "scripts": {
     "start": "tstl --watch",
     "start-docs": "watch typedoc src/",
