@@ -50,27 +50,87 @@ export interface ITarget {
 }
 
 export interface TargetInfo {
+  /**
+   * true if a target was correctly returned
+   */
   Valid: boolean;
+  /**
+   * 0 is highest priority
+   */
   Priority: number;
+  /**
+   * high is a good score- taken from target prioritisation card
+   */
   Score: number;
+  /**
+   * position in game world of aim point (this is the current position of the block that's being aimed for)
+   */
   AimPointPosition: Vector3;
+  /**
+   * team of target
+   */
   Team: number;
+  /**
+   * is it salvage? Will be false for salvage.
+   */
   Protected: boolean;
+  /**
+   * position in game world of target object.
+   */
   Position: Vector3;
+  /**
+   * velocity in game world in meters per second
+   */
   Velocity: Vector3;
+  /**
+   * has the player set this as the target?
+   */
   PlayerTargetChoice: boolean;
+  /**
+   * the unique integer Id of the target.
+   */
   Id: number;
 }
 
 export interface TargetPositionInfo {
+  /**
+   * true if target position info correctly returned.
+   */
   Valid: boolean;
+  /**
+   * degrees off nose of our vehicle where positive is clockwise
+   */
   Azimuth: number;
+  /**
+   * degrees off nose of our vehicle where positive is downwards. This often has dodgy values
+   */
   Elevation: number;
+  /**
+   * the elevation off nose of the target's altitude. Robustly calculated
+   */
   ElevationForAltitudeComponentOnly: number;
+  /**
+   * the range to the target
+   */
   Range: number;
+  /**
+   * the direction to the target (absolute, not normalised)
+   */
   Direction: Vector3;
+  /**
+   * the distance along the ground (ignoring vertical component) to the target
+   */
   GroundDistance: number;
+  /**
+   * in metres.
+   */
   AltitudeAboveSeaLevel: number;
+  /**
+   * position of target
+   */
   Position: Vector3;
+  /**
+   * meters per second
+   */
   Velocity: Vector3;
 }

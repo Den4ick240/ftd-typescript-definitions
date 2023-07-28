@@ -126,25 +126,79 @@ export interface IWeapons {
 }
 
 export interface WeaponInfo {
+  /**
+   * false means this WeaponInfo packet is useless. Move onto the next valid one.
+   */
   Valid: boolean;
+  /**
+   * the local position in the vehicle of the weapon. x is right, y is up and z is forwards.
+   */
   LocalPosition: Vector3;
+  /**
+   * the global position of the weapon. x is East, y is Up and Z is North.
+   */
   GlobalPosition: Vector3;
+  /**
+   * the local position in the vehicle where the projectile or laser will be created.
+   */
   LocalFirePoint: Vector3;
+  /**
+   * the global position in the world where the projectile or laser will be created.
+   */
   GlobalFirePoint: Vector3;
+  /**
+   * the speed in meters per second of the weapon- approximately correct for most weapon types.
+   */
   Speed: number;
+  /**
+   * the direction in global coordinate system that the weapon is facing
+   */
   CurrentDirection: Vector3;
+  /**
+   * the type of the weapon. cannon = 0,missile = 1 ,laser = 2,harpoon = 3,turret = 4,missilecontrol = 5,fireControlComputer  =6
+   */
   WeaponType: WeaponType;
+  /**
+   * the weapon slot of the weapon itself. 0 -> 5.
+   */
   WeaponSlot: number;
+  /**
+   * the weapon slot bit mask. The rightmost bit represents 'ALL' and is always on, and the second bit represents slot 1, etc. (for example 100111 will respond to slots All, 1, 2, and 5)
+   */
   WeaponSlotMask: number;
+  /**
+   * true if the player is controlling this weapon at the moment
+   */
   PlayerCurrentlyControllingIt: boolean;
 }
 
 export interface WeaponConstraints {
+  /**
+   * false means this WeaponConstraints packet is useless. Move onto the next valid one.
+   */
   Valid: boolean;
+  /**
+   * the minimum azimuth angle in degrees.
+   */
   MinAzimuth: number;
+  /**
+   * the maximum azimuth angle in degrees.
+   */
   MaxAzimuth: number;
+  /**
+   * the minimum elevation angle in degrees.
+   */
   MinElevation: number;
+  /**
+   * the maximum elevation angle in degrees.
+   */
   MaxElevation: number;
+  /**
+   * true if the 'Flip azimuth constraints' toggle is selected.
+   */
   FlipAzimuth: boolean;
+  /**
+   * true if the 'Set the restrictions in the parent construct space' toggle is selected.
+   */
   InParentConstructSpace: boolean;
 }

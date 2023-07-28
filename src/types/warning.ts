@@ -18,12 +18,36 @@ export interface IWarning {
 }
 
 export interface MissileWarningInfo {
+  /**
+   * false if the warning is junk due to incorrect indices.
+   */
   Valid: boolean;
+  /**
+   * the position of the missile
+   */
   Position: Vector3;
+  /**
+   * the velocity of the missile in meters per second
+   */
   Velocity: Vector3;
+  /**
+   * the distance from centre of mass of your construct to the missile
+   */
   Range: number;
+  /**
+   * the azimuth angle between your construct's forward direction and the missile (degrees)
+   */
   Azimuth: number;
+  /**
+   * the elevation angle between your construct's forward direction and the missile (degrees)
+   */
   Elevation: number;
+  /**
+   * the time since missile launch.
+   */
   TimeSinceLaunch: number;
+  /**
+   * the unique Id of the missile
+   */
   Id: number;
 }

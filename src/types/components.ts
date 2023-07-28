@@ -395,13 +395,44 @@ export interface IComponents {
 }
 
 export interface BlockInfo {
+  /**
+   * false means this BlockInfo packet is useless
+   */
   Valid: boolean;
+  /**
+   * position in world (east,up,north)
+   */
   Position: Vector3;
+  /**
+   * position in construct (right,up,forwards)
+   */
   LocalPosition: Vector3;
+  /**
+   * local position relative to the center of mass
+   */
+  LocalPositionRelativeToCom: Vector3;
+  /**
+   * forwards direction in world(east,up,north)
+   */
   Forwards: Vector3;
+  /**
+   * forward direction in construct (right,up,forwards)
+   */
   LocalForwards: Vector3;
+  /**
+   * the rotation of the block in world coordinates
+   */
   Rotation: Quaterion;
+  /**
+   * the rotation of the block in the vehicle's (or turret's) coordinate system.
+   */
   LocalRotation: Quaterion;
+  /**
+   * the sub construct identifier of the subconstruct the block is part of.
+   */
   SubConstructIdentifier: number;
+  /**
+   * the custom name assigned to the block
+   */
   CustomName: string;
 }

@@ -27,8 +27,20 @@ export interface IFleet {
 }
 
 export interface FleetInfo {
+  /**
+   * Unique ID of the fleet.
+   */
   ID: number;
+  /**
+   * Name of the fleet.
+   */
   Name: string;
+  /**
+   * Information about the flagship of the fleet.
+   */
   Flagship: FriendlyInfo;
+  /**
+   * A table of information regarding the fleet's members.  MAY CONTAIN NILS!
+   */
   Members: FriendlyInfo[];
 }
