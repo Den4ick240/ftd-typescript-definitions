@@ -1,5 +1,18 @@
 export interface IResources {
+  /**
+   * @category Resources
+   *
+   * Returns a Lua table containing a list of known resource zones.
+   * @returns {ResourceZoneInfo[]} undefined
+   */
   ResourceZones(): ResourceZoneInfo[];
+
+  /**
+   * @category Resources
+   *
+   * Returns information about a ship's available resources.
+   * @returns {ResourceInfo} undefined
+   */
   Resources(): ResourceInfo;
 }
 
