@@ -1,18 +1,18 @@
 /**
  * Based off of Unity 2021.3 documentation (https://docs.unity3d.com/ScriptReference/Quaternion.html)
  */
-declare class Quaterion {
+declare class Quaternion {
   /**
    * @readonly
    * The identity rotation.
    * 
    * This quaternion corresponds to "no rotation" - the object is perfectly aligned with the world or parent axes.
    */
-  static identity: Quaterion;
+  static identity: Quaternion;
   /**
    * DO NOT USE A CONSTRUCTOR!
    * 
-   * To create a new Quaterion instance, use the `Quaterion(x: number, y: number, z: number, w: number): Quaterion` function instead.
+   * To create a new Quaternion instance, use the `Quaternion(x: number, y: number, z: number, w: number): Quaternion` function instead.
    */
   constructor();
   /**
@@ -41,7 +41,7 @@ declare class Quaterion {
    * 
    * See Also: {@link Normalize} function.
    */
-  normalized: Quaterion;
+  normalized: Quaternion;
   /**
    * `this[int]`
    * 
@@ -122,37 +122,37 @@ declare class Quaterion {
    * 
    * @returns Angle in degrees between two rotations `a` and `b`.
    */
-  static Angle(a: Quaterion, b: Quaterion): number;
+  static Angle(a: Quaternion, b: Quaternion): number;
   /**
    * Creates a rotation which rotates `angle` degrees around `axis`.
    * 
    * For more information see {@link https://docs.unity3d.com/Manual/QuaternionAndEulerRotationsInUnity.html Rotation and Orientation in Unity}. The magnitude of the axis parameter is not applied.
    */
-  static AngleAxis(angle: number, axis: Vector3): Quaterion;
+  static AngleAxis(angle: number, axis: Vector3): Quaternion;
   /**
    * The dot product between two rotations.
    */
-  static Dot(a: Quaterion, b: Quaterion): number;
+  static Dot(a: Quaternion, b: Quaternion): number;
   /**
    * @returns Rotation that rotates z degrees around the z axis, x degrees around the x axis, and y degrees around the y axis; applied in that order.
    * 
    * For more information, see {@link https://docs.unity3d.com/Manual/QuaternionAndEulerRotationsInUnity.html Rotation and Orientation in Unity}.
    */
-  static Euler(x: number, y: number, z: number): Quaterion;
+  static Euler(x: number, y: number, z: number): Quaternion;
   /**
    * @returns Rotation that rotates z degrees around the z axis, x degrees around the x axis, and y degrees around the y axis.
    */
-  static Euler(euler: Vector3): Quaterion;
+  static Euler(euler: Vector3): Quaternion;
   /**
    * Creates a rotation which rotates from `fromDirection` to `toDirection`.
    * 
    * Usually you use this to rotate a transform so that one of its axes eg. the y-axis - follows a target direction `toDirection` in world space.
    */
-  static FromToRotation(fromDirection: Vector3, toDirection: Vector3): Quaterion;
+  static FromToRotation(fromDirection: Vector3, toDirection: Vector3): Quaternion;
   /**
    * @returns Inverse of `rotation`.
    */
-  static Inverse(rotation: Quaterion): Quaterion;
+  static Inverse(rotation: Quaternion): Quaternion;
   /**
    * Interpolates between `a` and `b` by `t` and normalizes the result afterwards. The parameter `t` is clamped to the range [0, 1].
    * 
@@ -163,7 +163,7 @@ declare class Quaterion {
    * @param t Interpolation ratio.
    * @returns A quaternion interpolated between quaternions a and b. 
    */
-  static Lerp(a: Quaterion, b: Quaterion, t: number): Quaterion;
+  static Lerp(a: Quaternion, b: Quaternion, t: number): Quaternion;
   /**
    * Interpolates between `a` and `b` by `t` and normalizes the result afterwards. The parameter `t` is not clamped.
    * 
@@ -171,7 +171,7 @@ declare class Quaterion {
    * 
    * See Also: {@link Lerp}, {@link SlerpUnclamped}.
    */
-  static LerpUnclamped(a: Quaterion, b: Quaterion, t: number): Quaterion;
+  static LerpUnclamped(a: Quaternion, b: Quaternion, t: number): Quaternion;
   /**
    * Creates a rotation with the specified `forward` and `upwards` directions.
    * 
@@ -186,7 +186,7 @@ declare class Quaterion {
    * @param forward The direction to look in.
    * @param upwards The vector that defines in which direction up is.
    */
-  static LookRotation(forward: Vector3, upwards?: Vector3): Quaterion;
+  static LookRotation(forward: Vector3, upwards?: Vector3): Quaternion;
   /**
    * Converts this quaternion to one with the same orientation but with a magnitude of 1.
    * 
@@ -198,13 +198,13 @@ declare class Quaterion {
    * 
    * See Also: {@link normalized} variable.
    */
-  static Normalize(q: Quaterion): Quaterion;
+  static Normalize(q: Quaternion): Quaternion;
   /**
    * Rotates a rotation `from` towards `to`.
    * 
    * The `from` quaternion is rotated towards `to` by an angular step of `maxDegreesDelta` (but note that the rotation will not overshoot). Negative values of `maxDegreesDelta` will move away from `to` until the rotation is exactly the opposite direction.
    */
-  static RotateTowards(from: Quaterion, to: Quaterion, maxDegreesDelta: number): Quaterion;
+  static RotateTowards(from: Quaternion, to: Quaternion, maxDegreesDelta: number): Quaternion;
   /**
    * Spherically interpolates between quaternions `a` and `b` by ratio `t`. The parameter `t` is clamped to the range [0, 1].
    * 
@@ -217,13 +217,13 @@ declare class Quaterion {
    * @param t Interpolation ratio.
    * @returns A quaternion spherically interpolated between quaternions a and b. 
    */
-  static Slerp(a: Quaterion, b: Quaterion, t: number): Quaterion;
+  static Slerp(a: Quaternion, b: Quaternion, t: number): Quaternion;
   /**
    * Spherically interpolates between `a` and `b` by t. The parameter `t` is not clamped.
    * 
    * See Also: {@link LerpUnclamped}, {@link Slerp}.
    */
-  static SlerpUnclamped(a: Quaterion, b: Quaterion, t: number): Quaterion;
+  static SlerpUnclamped(a: Quaternion, b: Quaternion, t: number): Quaternion;
   /**
    * Combines rotations `lhs` and `rhs`.
    * 
@@ -234,7 +234,7 @@ declare class Quaterion {
    * @param lhs Left-hand side quaternion.
    * @param rhs Right-hand side quaternion.
    */
-  multiply: LuaMultiplicationMethod<Quaterion, Quaterion>;
+  multiply: LuaMultiplicationMethod<Quaternion, Quaternion>;
 }
 
-declare function Quaterion(x: number, y: number, z: number, w: number): Quaterion;
+declare function Quaternion(x: number, y: number, z: number, w: number): Quaternion;

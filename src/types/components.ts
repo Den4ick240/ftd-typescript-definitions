@@ -422,11 +422,11 @@ export interface BlockInfo {
   /**
    * the rotation of the block in world coordinates
    */
-  Rotation: Quaterion;
+  Rotation: Quaternion;
   /**
    * the rotation of the block in the vehicle's (or turret's) coordinate system.
    */
-  LocalRotation: Quaterion;
+  LocalRotation: Quaternion;
   /**
    * the sub construct identifier of the subconstruct the block is part of.
    */

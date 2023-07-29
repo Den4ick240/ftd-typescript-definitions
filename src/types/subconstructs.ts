@@ -105,7 +105,7 @@ export interface ISubconstructs {
    *
    * Returns a Quaternion representing the orientation of the block in its parent SubConstruct as it was when it was placed.
    * @param {number} SubConstructIdentifier the persistent identifier of the SubConstruct
-   * @returns {Quaterion} the rotation of the subconstruct relative to its parent as it was first placed.
+   * @returns {Quaternion} the rotation of the subconstruct relative to its parent as it was first placed.
    */
-  GetSubConstructIdleRotation(SubConstructIdentifier: number): Quaterion;
+  GetSubConstructIdleRotation(SubConstructIdentifier: number): Quaternion;
 }

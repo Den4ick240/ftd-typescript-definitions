@@ -34,7 +34,7 @@ export interface FriendlyInfo {
   /**
    * the rotation of the friendly construct
    */
-  Rotation: Quaterion;
+  Rotation: Quaternion;
   /**
    * the position of the construct (world East Up North frame) from which PositiveSize and Negative size are referenced
    */
